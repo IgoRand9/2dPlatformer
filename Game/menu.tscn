@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwt3cd56da6ph"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_ivlm2"]
+[ext_resource type="Texture2D" uid="uid://d2x1x50cx0egg" path="res://Game_assets/background/background_space2.png" id="2_ir2c6"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_ivlm2")
+
+[node name="BackgroundSpace2" type="Sprite2D" parent="."]
+position = Vector2(576.722, 325)
+scale = Vector2(3.61701, 3.63333)
+texture = ExtResource("2_ir2c6")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 880.0
+offset_top = 192.0
+offset_right = 1088.0
+offset_bottom = 279.0
+theme_override_font_sizes/font_size = 50
+text = "Play"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 192.0
+offset_right = 296.0
+offset_bottom = 279.0
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
